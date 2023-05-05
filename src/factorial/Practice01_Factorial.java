@@ -29,6 +29,7 @@ public class Practice01_Factorial {
 
     //Testing method
     public static void main(String[] args) {
+
         System.out.println(factorial(5)); // 120
     }
 }

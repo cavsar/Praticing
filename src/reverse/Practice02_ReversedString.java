@@ -18,7 +18,7 @@ public class Practice02_ReversedString {
         String rev="";
         for (int i = s.length()-1 ; i >=0; i--) {
 
-            rev+= String.valueOf(s.charAt(i));
+            rev+= s.charAt(i);
         }
         return rev;
 

@@ -3,6 +3,7 @@ package duplicate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.TreeSet;
 
 public class Practice06_RemoveDuplicatesInaArray {/*
     Write a method that takes a String ArrayList argument and returns the list back with all duplicates removed
@@ -16,7 +17,15 @@ public class Practice06_RemoveDuplicatesInaArray {/*
      */
 
     public static ArrayList<String> removeDuplicateStrings(ArrayList<String> strings){
-        return new ArrayList<>(new HashSet<>(strings));
+      //  return new ArrayList<>(new HashSet<>(strings));
+       // return new ArrayList<>(new TreeSet<>(strings));
+        ArrayList<String> newList = new ArrayList<>();
+
+        for (String s : strings) {
+            if(!newList.contains(s)) newList.add(s);
+        }
+        return newList;
+
     }
 
 

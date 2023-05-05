@@ -21,21 +21,24 @@ Expected output 2:
 
      */
     public static void main(String[] args) {
-        System.out.println(duplicatedStrings(new String[]{"abbc", "abc", "abc", "a", "b", "a"}));
+        System.out.println(duplicatedStrings(new String[]{"A", "foo", "12" , "Foo", "bar", "a", "a", "java"}));
     }
     public static ArrayList<String> duplicatedStrings( String[]arr){
-        ArrayList<String> duplicates = new ArrayList<>();
-        for (int i = 0; i < arr.length-1; i++) {
+        ArrayList<String> dupContainer = new ArrayList<>();
+        ArrayList<String> solution = new ArrayList<>();
+
+        for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j < arr.length; j++) {
-                if (!duplicates.contains(arr[i]) && arr[i].equalsIgnoreCase(arr[j])) {
-                    duplicates.add(arr[i]);
-                    break;
+                if(arr[i].equalsIgnoreCase(arr[j]) && !dupContainer.contains(arr[i].toLowerCase())){
+
+                    dupContainer.add(arr[i].toLowerCase());
+                    solution.add(arr[i]);
 
                 }
             }
         }
+        return solution;
 
-        return duplicates;
     }
     }
 
