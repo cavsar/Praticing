@@ -22,7 +22,7 @@ public class Practice02_Factorial_In_array {
             if(numbers[i] == 0 || numbers[i] == 1) numbers[i] = 1;
             else{
                 int number =  numbers[i];
-                for (int j = 2; j < number; j++) {
+                for (int j = 2; j <= number; j++) {
                     numbers[i] *= j;
                 }
             }

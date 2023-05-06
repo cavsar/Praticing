@@ -21,7 +21,7 @@ public class Practice01 {
      */
 
     public static void main(String[] args) {
-getFibonnachiSeries(8);
+  getFibonnachiSeries(8);
     }
 
     public static void getFibonnachiSeries(int number) {
@@ -33,6 +33,7 @@ getFibonnachiSeries(8);
             sum = zero + one;
             zero = one;
             one = sum;
+
 
         }
     }
